@@ -1,4 +1,4 @@
-*import pyodbc
+import pyodbc
 
 # Установите соединение с вашей базой данных
 # Замените параметры на свои: 'server', 'database', 'username', 'password'
