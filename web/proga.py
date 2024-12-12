@@ -1,12 +1,11 @@
 import pyodbc
 
-# Установите соединение с вашей базой данных
-# Замените параметры на свои: 'server', 'database', 'username', 'password'
+# Устанавливаю соединение с вашей базой данных
 conn = pyodbc.connect(
-    'DRIVER={ODBC Driver 17 for SQL Server};SERVER=your_server;DATABASE=your_database;UID=your_username;PWD=your_password')
+    'DRIVER={ODBC Driver 17 for SQL Server};SERVER=DESKTOP-UIBJPQB;DATABASE=qtcourse;UID=lodin;PWD=password')
 cursor = conn.cursor()
 
-# Создаем таблицу, если она не существует
+# Таблица
 cursor.execute('''
 IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='dictionary' AND xtype='U')
 CREATE TABLE dictionary (
@@ -17,7 +16,7 @@ CREATE TABLE dictionary (
 ''')
 conn.commit()
 
-
+# Функции для выполнения разных действий слов из базы данных/словаря
 def add_word(word, definition):
     try:
         cursor.execute('INSERT INTO dictionary (word, definition) VALUES (?, ?)', (word, definition))
