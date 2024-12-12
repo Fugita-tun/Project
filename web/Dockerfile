@@ -1,4 +1,4 @@
- FROM	ubuntu:latest
+ FROM	python:3.9-slim
  #	Устанавливаем	рабочую	директорию
  WORKDIR	/web
  #	Копируем	файл	зависимостей
