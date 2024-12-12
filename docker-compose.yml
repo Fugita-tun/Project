@@ -18,8 +18,8 @@ services:
     image: mysql:8.0
     container_name: db2
     environment:
-      MYSQL_ROOT_PASSWORD: example
-      MYSQL_DATABASE: testdb
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: DESKTOP-UIBJPQB
     ports:
       - "3306:3306"
     networks:
