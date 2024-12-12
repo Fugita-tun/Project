@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  appa:
+  web:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: appa
+    container_name: web
     depends_on:
       - db
     #environment:
