@@ -14,14 +14,15 @@ services:
     networks:
       - app_network
 
-  db:
-    image: mysql:8.0
+  db2:
+    image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: db2
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: DESKTOP-UIBJPQB
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password
+      - MSSQL_PID=Developer
     ports:
-      - "3306:3306"
+      - "1433:1433"
     networks:
       - app_network
 
