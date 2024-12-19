@@ -2,7 +2,7 @@ import pyodbc
 
 # Устанавливаю соединение с вашей базой данных
 conn = pyodbc.connect(
-    'DRIVER={ODBC Driver 17 for SQL Server};SERVER=db2;DATABASE=qtcourse;UID=lodin;PWD=password')
+    'DRIVER={ODBC Driver 17 for SQL Server};SERVER=db2;DATABASE=Developer;UID=lodin;PWD=password')
 cursor = conn.cursor()
 
 # Таблица
